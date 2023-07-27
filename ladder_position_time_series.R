@@ -1,5 +1,5 @@
 # Check each package and install if not installed
-for (package_name in c("tidyverse", "shiny", "polite")) {
+for (package_name in c("tidyverse", "shiny", "rvest", "polite")) {
   if (!require(package_name, character.only = TRUE)) {
     # If not installed, install it
     install.packages(package_name, dependencies = TRUE)
