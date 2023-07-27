@@ -6,11 +6,6 @@ for (package_name in c("tidyverse", "shiny", "polite")) {
   }
 }
 
-# Load the libraries
-library(tidyverse)
-library(shiny)
-library(polite)
-
 # Initialize a data frame to store the results
 results <- data.frame(year = integer(), pos = integer(), team = character())
 
