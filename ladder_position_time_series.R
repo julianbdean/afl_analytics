@@ -39,7 +39,7 @@ for (year in 1980:2022) {
 
 # UI
 ui <- fluidPage(
-  titlePanel("Ladder position per Year"),
+  titlePanel("Ladder position by Year"),
   sidebarLayout(
     sidebarPanel(
       selectInput("team", "Choose a Team:", choices = unique(results$team))
@@ -62,7 +62,7 @@ server <- function(input, output) {
       geom_line() +
       scale_y_reverse(breaks = seq(1, 18, 1)) +
       theme_classic() +
-      labs(x = "Year", y = "Position", title = paste("Ladder position of", input$team, "per Year"))
+      labs(x = "Year", y = "Position", title = paste("Ladder position of", input$team, "by Year"))
   })
 }
 
