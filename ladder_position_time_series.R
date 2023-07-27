@@ -1,9 +1,15 @@
-## Shiny
+# Check each package and install if not installed
+for (package_name in c("tidyverse", "shiny", "polite")) {
+  if (!require(package_name, character.only = TRUE)) {
+    # If not installed, install it
+    install.packages(package_name, dependencies = TRUE)
+  }
+}
 
 # Load the libraries
-library(rvest)
 library(tidyverse)
 library(shiny)
+library(polite)
 
 # Initialize a data frame to store the results
 results <- data.frame(year = integer(), pos = integer(), team = character())
