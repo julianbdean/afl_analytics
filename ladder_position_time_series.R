@@ -12,7 +12,7 @@ results <- data.frame(year = integer(), pos = integer(), team = character())
 # Loop through each year from 1980 to present
 for (year in 1980:as.numeric(format(Sys.Date(), "%Y"))) {
   # Formulate the URL for the current year
-  url <- paste0("https://finalsiren.com/AFLLadder.asp?AFLLadderTypeID=2&SeasonID=", year, "&Round=22-1")
+  url <- paste0("https://finalsiren.com/AFLLadder.asp?AFLLadderTypeID=2&SeasonID=", year, "&Round=23-1")
   
   # Read the HTML code from the website
   webpage <- read_html(url)
